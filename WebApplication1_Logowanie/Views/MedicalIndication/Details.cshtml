@@ -1,0 +1,74 @@
+﻿@model FamilyDoctor.Models.VO.MedicalIndicationEditVo
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>MedicalIndication</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.ImportantInformation)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ImportantInformation)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Frequency)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Frequency)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.EndDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.EndDate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.StartDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.StartDate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Drug)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Drug)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MedicalAdvice)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MedicalAdvice)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Dosage)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Dosage)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.ID, id2 = Model.PatientId })  |
+    @Html.ActionLink("Back to List", "Index", new { id = Model.PatientId })
+</p>

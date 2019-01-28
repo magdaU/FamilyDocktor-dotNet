@@ -1,0 +1,57 @@
+﻿@model FamilyDoctor.Models.VO.BloodPressureEditVo
+
+@{
+    ViewBag.Title = "Details";
+  
+}
+<h2>Details</h2>
+
+<div>
+    <h4>Blood Pressure</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Date)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Date)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.HeartBeat)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.HeartBeat)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Systolic)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Systolic)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Diastolic)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Diastolic)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Date)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Date)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.ID, id2 = Model.PatientId }) |
+    @Html.ActionLink("Back to List", "Index", new { id = Model.PatientId })
+
+</p>

@@ -1,0 +1,58 @@
+﻿@model FamilyDoctor.Models.VO.VaccinationVo
+
+@{
+    ViewBag.Title = "Index";
+    ViewBag.Details = "Patient";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create", new { id = Model.patientId })
+</p>
+<table class="table">
+    <tr>
+        <th>
+            AllVaccination
+        </th>
+        <th>
+           NextVaccination
+        </th>
+        <th>
+            Details
+        </th>
+        <th>
+            Date
+        </th>
+        <th>
+           Name
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model.Vaccination) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.AllVaccination)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NextVaccination)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Details)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Date)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Name)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.ID, id2 = Model.patientId }) |
+            @Html.ActionLink("Details", "Details", new { id = item.ID, id2 = Model.patientId }) |
+            @Html.ActionLink("Delete", "Delete", new { id = item.ID, id2 = Model.patientId })
+        </td>
+    </tr>
+}
+
+</table>

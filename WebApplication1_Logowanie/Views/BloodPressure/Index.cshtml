@@ -1,0 +1,54 @@
+﻿@model FamilyDoctor.Models.VO.BloodPressureVo
+
+
+@{
+    ViewBag.Title = "Index";
+    ViewBag.Details = "Patient";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create", new { id = Model.patientId })
+</p>
+<table class="table">
+    <tr>
+        <th>
+            Systolic
+        </th>
+        <th>
+            Diastolic
+        </th>
+        <th>
+            Heart beat
+        </th>
+        <th>
+            Date
+        </th>
+        <th></th>
+    </tr>
+
+
+    @foreach (var item in Model.BloodPressure)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Systolic)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Diastolic)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.HeartBeat)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Date)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id = item.ID, id2 = Model.patientId }) |
+                @Html.ActionLink("Details", "Details", new { id = item.ID, id2 = Model.patientId }) |
+                @Html.ActionLink("Delete", "Delete", new { id = item.ID, id2 = Model.patientId })
+            </td>
+        </tr>
+    }
+</table>

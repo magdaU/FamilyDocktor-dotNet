@@ -1,0 +1,51 @@
+﻿@model FamilyDoctor.Models.VO.PatientDocumentVo
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create", new { id = Model.patientId })
+</p>
+<table class="table">
+    <tr>
+        <th>
+           Details
+        </th>
+        <th>
+           Date
+        </th>
+        <th>
+          DocumentName
+        </th>
+        <th>
+           TypeDocument
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model.PatientDocument) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Details)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Date)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DocumentName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TypeDocument)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id = item.ID, id2 = Model.patientId }) |
+            @Html.ActionLink("Details", "Details", new { id = item.ID, id2 = Model.patientId }) |
+            @Html.ActionLink("Delete", "Delete", new { id = item.ID, id2 = Model.patientId })
+        </td>
+    </tr>
+}
+
+</table>

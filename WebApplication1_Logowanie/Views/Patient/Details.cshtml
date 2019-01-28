@@ -1,0 +1,105 @@
+﻿@model FamilyDoctor.Models.Patient
+@*@using RenderPartial("~/Views/Patient/BloodPressure/Details.cshtml")*@
+
+
+@{
+    ViewBag.Title = "Details";
+
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Patient</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.FirstName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FirstName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.LastName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LastName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PatientPhoneNumber)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PatientPhoneNumber)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.BornDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.BornDate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Email)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Email)
+        </dd>
+
+    </dl>
+</div>
+
+@Html.ActionLink("Edit", "Edit", new { id = Model.ID }, null) |
+@Html.ActionLink("Back to List", "Index") |
+
+
+
+<p>
+    <div class="container">
+        <button type="button" class="btn btn-default  btn-lg">
+            @Html.ActionLink("Patient blood pressure", "Index", "BloodPressure", new { id = Model.ID }, null)
+        </button>
+    </div>
+</p>
+
+<p>
+    <div class="container">
+        <button type="button" class="btn btn-default  btn-lg">
+            @Html.ActionLink("MedicalIndication", "Index", "MedicalIndication", new { id = Model.ID }, null)
+        </button>
+    </div>
+</p>
+
+<p>
+    <div class="container">
+        <button type="button" class="btn btn-default  btn-lg">
+            @Html.ActionLink("DoctorVisit", "Index", "DoctorVisit", new { id = Model.ID }, null)
+        </button>
+    </div>
+</p>
+
+<p>
+    <div class="container">
+        <button type="button" class="btn btn-default  btn-lg">
+            @Html.ActionLink("Vaccination", "Index", "Vaccination", new { id = Model.ID }, null)
+        </button>
+
+    </div>
+</p>
+
+<p>
+
+    <div class="container">
+        <button type="button" class="btn btn-default  btn-lg">
+            @Html.ActionLink("PatientDocument", "Index", "PatientDocument", new { id = Model.ID }, null)
+        </button>
+
+    </div>
+</p>
